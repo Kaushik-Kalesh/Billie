@@ -11,7 +11,12 @@
 
     <Grid x:Name="MainGrid" HorizontalAlignment="Center" VerticalAlignment="Center">
         <StackPanel Orientation="Vertical">
-            <TextBlock Text="Login" FontSize="50" FontWeight="ExtraBold" HorizontalAlignment="Center" Margin="0, 0, 0, 40" />
+            <StackPanel Orientation="Horizontal" Margin="0, 0, 0, 40">
+                <Button x:Name="BackButton" Background="Transparent" BorderBrush="Transparent" Visibility="Collapsed" Click="BackButton_Click">
+                    <FontIcon Glyph="&#xE72B;" />
+                </Button>
+                <TextBlock Text="Login" FontSize="50" FontWeight="ExtraBold" HorizontalAlignment="Left" />
+            </StackPanel>
             <StackPanel Orientation="Horizontal">
                 <Button x:Name="CashierButton" Background="Transparent" BorderBrush="Transparent" Margin="0, 0, 8, 0"
                         Click="CashierButton_Click">
@@ -31,7 +36,8 @@
                          MaxLength="8" Width="200" Margin="0, 8, 0, 0" Visibility="Collapsed" />
             <StackPanel x:Name="ForgotPasswordStackPanel" Orientation="Vertical" Visibility="Collapsed" Margin="0, 8, 0, 0" >
                 <TextBlock x:Name="IncorrectPasswordTextBox" Text="Incorrect Password" FontStyle="Italic" HorizontalAlignment="Center" />
-                <Button x:Name="ForgotPasswordPasswordBox" Background="Transparent" BorderBrush="Transparent" Margin="0, 8, 0, 0" HorizontalAlignment="Center">
+                <Button x:Name="ForgotPasswordPasswordBox" Background="Transparent" BorderBrush="Transparent" 
+                        Margin="0, 8, 0, 0" HorizontalAlignment="Center" Click="ForgotPasswordPasswordBox_Click">
                     <TextBlock Text="Forgot Password?" FontWeight="ExtraLight" />
                 </Button>
             </StackPanel>

@@ -50,14 +50,13 @@ namespace Billie
             else
             {
                 ForgotPasswordStackPanel.Visibility = Visibility.Collapsed;
-
                 if (currentUserType == UserType.Cashier)
                 {
-                    // Navigate to Cashier's Dashboard
+                    Frame.Navigate(typeof(CashierDashboardPage));
                 }
                 else
                 {
-                    // Navigate to Owner's Dashboard
+                    Frame.Navigate(typeof(OwnerDashboardPage));
                 }
             }
         }
@@ -77,6 +76,7 @@ namespace Billie
             }
 
             UserPasswordBox.Visibility = Visibility.Visible;
+            BackButton.Visibility = Visibility.Visible;
         }
 
 
@@ -101,6 +101,23 @@ namespace Billie
         private void ForgotPasswordPasswordBox_Click(object sender, RoutedEventArgs e)
         {
             // Setup Email Recovery
+        }
+
+        private void BackButton_Click(object sender, RoutedEventArgs e)
+        {
+            UserPasswordBox.Password = "";
+            UserPasswordBox.Visibility = Visibility.Collapsed;
+            ForgotPasswordStackPanel.Visibility = Visibility.Collapsed;
+            BackButton.Visibility = Visibility.Collapsed;
+            if (currentUserType == UserType.Cashier)
+            {
+                OwnerButton.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                CashierButton.Visibility = Visibility.Visible;
+            }
+            CashierButton.Margin = new Thickness(0, 0, 8, 0);
         }
     }
 }
