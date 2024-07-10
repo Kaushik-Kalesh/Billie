@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page
+    x:Class="Billie.CashierDashboardPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Billie"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource DesktopAcrylicTransparentBrush}">
+
+    <StackPanel Orientation="Vertical">
+        <TabView IsAddTabButtonVisible="False" TabWidthMode="Equal">
+            <TabView.TabItems>
+                <TabViewItem  Header="Billing" IsClosable="False">
+                    <local:BillingPage />
+                </TabViewItem>
+                <TabViewItem  Header="Stocking" IsClosable="False">
+                    <local:StockingPage />
+                </TabViewItem>
+            </TabView.TabItems>
+        </TabView>
+        <Button x:Name="LogOutButton" Content="Log Out" HorizontalAlignment="Right" Margin="0, 8, 8, 0" Click="LogOutButton_Click" />
+    </StackPanel>
+</Page>
