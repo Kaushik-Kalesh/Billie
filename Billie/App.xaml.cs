@@ -7,6 +7,7 @@ namespace Billie
         public App()
         {
             this.InitializeComponent();
+            UserPasswordAccess.InitializeDatabase();
         }
 
         /// <param name="args">Details about the launch request and process.</param>
