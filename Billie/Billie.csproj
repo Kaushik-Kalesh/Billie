@@ -48,6 +48,30 @@
     <HasPackageAndPublishMenu>true</HasPackageAndPublishMenu>
   </PropertyGroup>
   <ItemGroup>
+    <None Remove="BillingPage.xaml" />
+    <None Remove="CashierDashboardPage.xaml" />
     <None Remove="LoginPage.xaml" />
+    <None Remove="OwnerDashboardPage.xaml" />
+    <None Remove="StockingPage.xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="OwnerDashboardPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="StockingPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="BillingPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="CashierDashboardPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
 </Project>
