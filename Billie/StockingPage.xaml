@@ -6,10 +6,47 @@
     xmlns:local="using:Billie"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:controls="using:CommunityToolkit.WinUI.UI.Controls"
     mc:Ignorable="d"
     Background="{ThemeResource DesktopAcrylicTransparentBrush}">
 
-    <StackPanel Orientation="Vertical">
-        <TextBlock Text="Stock Management" />
+    <StackPanel Orientation="Vertical" Margin="8">
+        <TextBlock Text="Stock Management" FontSize="40" FontWeight="ExtraBold" />
+        <AutoSuggestBox PlaceholderText="Enter Barcode or Product Name"            
+            QueryIcon="Find"
+            Margin="0, 8, 0, 0"
+            Width="300"
+            HorizontalAlignment="Left" />
+        <controls:DataGrid x:Name="CustomerDataGrid" 
+            Margin="0, 8, 0, 0"
+            GridLinesVisibility="All"
+            HeadersVisibility="Column"      
+            CanUserReorderColumns="True"
+            CanUserResizeColumns="True"
+            CanUserSortColumns="True"
+            AutoGenerateColumns="False">
+            <controls:DataGrid.Columns>
+                <controls:DataGridTextColumn
+                    Header="ID" 
+                    Binding="{Binding ID}" />
+                <controls:DataGridTextColumn 
+                    Header="Product Name" 
+                    Binding="{Binding ProductName}" />
+                <controls:DataGridTextColumn 
+                    Header="Category"
+                    Binding="{Binding Category}" />
+                <controls:DataGridTextColumn 
+                    Header="Price" 
+                    Binding="{Binding Price}" />
+                <controls:DataGridTextColumn 
+                    Header="Barcode" 
+                    Binding="{Binding Barcode}" />
+                <controls:DataGridTextColumn 
+                    Header="Stock Quantity" 
+                    Binding="{Binding StockQuantity}"
+                    Width="*"/>
+            </controls:DataGrid.Columns>
+        </controls:DataGrid>
+        <Button Content="Add" HorizontalAlignment="Center" Click="Button_Click" Margin="0, 8, 0, 0" />
     </StackPanel>
 </Page>
