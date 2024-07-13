@@ -21,13 +21,13 @@
                 <Button x:Name="CashierButton" Background="Transparent" BorderBrush="Transparent" Margin="0, 0, 8, 0"
                         Click="CashierButton_Click">
                     <StackPanel Orientation="Vertical">
-                        <Image Source="C:\Users\kaush\Downloads\cashier_logo.png" Height="200" />
+                        <Image Source="Assets/cashier_logo.png" Height="200" />
                         <TextBlock Text="Cashier" HorizontalAlignment="Center" FontSize="25" FontWeight="Bold" Margin="0, 8, 0, 0" />
                     </StackPanel>
                 </Button>
                 <Button x:Name="OwnerButton" Background="Transparent" BorderBrush="Transparent" Click="OwnerButton_Click">
                     <StackPanel Orientation="Vertical">
-                        <Image Source="C:\Users\kaush\Downloads\owner_logo.png" Height="200" />
+                        <Image Source="Assets/owner_logo.png" Height="200" />
                         <TextBlock Text="Owner" HorizontalAlignment="Center" FontSize="25" FontWeight="Bold" Margin="0, 8, 0, 0" />
                     </StackPanel>
                 </Button>
