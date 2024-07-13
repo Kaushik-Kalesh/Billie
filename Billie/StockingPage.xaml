@@ -28,25 +28,29 @@
             <controls:DataGrid.Columns>
                 <controls:DataGridTextColumn
                     Header="ID" 
-                    Binding="{Binding ID}" />
+                    Binding="{Binding ID}"
+                    IsReadOnly="True" />
                 <controls:DataGridTextColumn 
                     Header="Product Name" 
                     Binding="{Binding ProductName}" />
                 <controls:DataGridTextColumn 
-                    Header="Category"
-                    Binding="{Binding Category}" />
+                    Header="Brand"
+                    Binding="{Binding Brand}" />
                 <controls:DataGridTextColumn 
                     Header="Price" 
                     Binding="{Binding Price}" />
                 <controls:DataGridTextColumn 
                     Header="Barcode" 
-                    Binding="{Binding Barcode}" />
+                    Binding="{Binding Barcode}"
+                    IsReadOnly="True" />
                 <controls:DataGridTextColumn 
                     Header="Stock Quantity" 
                     Binding="{Binding StockQuantity}"
-                    Width="*"/>
+                    Width="*" />
             </controls:DataGrid.Columns>
         </controls:DataGrid>
-        <Button Content="Add" HorizontalAlignment="Center" Click="Button_Click" Margin="0, 8, 0, 0" />
+        <TextBox x:Name="NewBarcodeTextBox" PlaceholderText="Barcode" HorizontalAlignment="Center" 
+                 Margin="0, 8, 0, 0"  MaxLength="13" InputScope="Number" Width="250" />
+        <Button x:Name="AddProductButton" Content="Add" HorizontalAlignment="Center" Click="AddProductButton_Click" Margin="0, 8, 0, 0" />
     </StackPanel>
 </Page>
